@@ -1,0 +1,69 @@
+
+
+<html>
+
+<head>
+
+<title></title>
+<style type="text/css">
+ body{
+  background-image: url('b.jpg');
+  background-size: cover;
+ }
+
+
+ </style>
+<body>
+<script>
+function user()
+{
+var username=/admin/;
+var password=/admin/;
+
+
+var str=document.getElementById("txt").value;
+var str1=document.getElementById("password").value;
+var myEmail = document.getElementById('emailField');
+
+const validate = function (email) {
+   // let str1 = /^[a-zA-Z]{2,30}$/;
+   let str2 = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+   return str2.test(email) ? true : false;
+}
+var res=username.test(str);
+var res1=password.test(str1);
+if(res==true && res1==true)
+{
+ // window.open("index.html");
+  validate(myEmail.value) ? window.open("opening.html") : alert("Wrong")
+
+}
+
+else
+{
+alert("please fild correct username or pasword")
+
+}
+
+//document.getElementById("demo1").innerHTML=res;
+
+//document.getElementById("demo2").innerHTML=res1;
+
+}
+
+</script>
+<center>
+
+Enter Username:<input type="text" id="txt"><br>
+<br>Enter Password:<input type="password" id="password">
+<br>Enter Email:<input type="text" id="emailField" placeholder="Enter Email here">
+         
+
+<br><input type="button" onclick="user()" value="submit" ><br>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+</center>
+</body>
+
+</html>
